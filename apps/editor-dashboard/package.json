@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.13",
+    "@mui/joy": "^5.0.0-beta.10",
+    "@mui/material": "^5.14.13",
+    "install": "^0.13.0",
     "next": "13.5.4",
-    "next-auth": "^4.23.2",
+    "npm": "^10.2.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-minimal-pie-chart": "^8.4.0",
+    "ui": "*"
   },
   "devDependencies": {
     "@types/node": "^20",
