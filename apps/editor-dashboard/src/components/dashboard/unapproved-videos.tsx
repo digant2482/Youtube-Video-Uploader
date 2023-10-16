@@ -1,28 +1,28 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import { Typography } from '@mui/material';
+import * as React from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { Typography } from "@mui/material";
 
 function createData(
   name: string,
   calories: number,
   fat: number,
   carbs: number,
-  protein: number,
+  protein: number
 ) {
   return { name, calories, fat, carbs, protein };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
+  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
+  createData("Eclair", 262, 16.0, 24, 6.0),
+  createData("Cupcake", 305, 3.7, 67, 4.3),
+  createData("Gingerbread", 356, 16.0, 49, 3.9),
 ];
 
 export default function UnapprovedVideos() {
@@ -33,7 +33,10 @@ export default function UnapprovedVideos() {
           {rows.map((row) => (
             <TableRow
               key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 }, height: '56px' }}
+              sx={{
+                "&:last-child td, &:last-child th": { border: 0 },
+                height: "56px",
+              }}
             >
               <TableCell component="th" scope="row">
                 {row.name}
@@ -41,15 +44,18 @@ export default function UnapprovedVideos() {
               <TableCell align="right">{row.calories}</TableCell>
               <TableCell align="right">{row.fat}</TableCell>
               <TableCell align="right">
-                <Typography variant={"body2"} 
-                  sx={{ padding: 0}}>
-                  <span 
-                    style={{ 
+                <Typography variant={"body2"} sx={{ padding: 0 }}>
+                  <span
+                    style={{
                       padding: "5px",
                       borderRadius: "15px",
-                      color: "#000000",                       
-                      backgroundColor: "rgba(0, 128, 0, 0.15)"
-                    }}> Approved </span>
+                      color: "#000000",
+                      backgroundColor: "rgba(0, 128, 0, 0.15)",
+                    }}
+                  >
+                    {" "}
+                    Approved{" "}
+                  </span>
                 </Typography>
               </TableCell>
             </TableRow>
